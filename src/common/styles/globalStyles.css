@@ -1,0 +1,48 @@
+body {
+  --text-color: white;
+  --selected-day-border-color: gray;
+  --current-day-border-color: lightgray;
+  --daysOff-color: coral;
+  --hover: rgba(0, 0, 0, 0.4);
+  --overlay: rgba(0, 0, 0, 0.85);
+  --dayout-opacity: 0.3;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+body[data-light] {
+  --text-color: black;
+  --selected-day-border-color: gray;
+  --current-day-border-color: black;
+  --daysOff-color: darkred;
+  --hover: rgba(255, 255, 255, 0.4);
+  --overlay: rgba(255, 255, 200, 0.8);
+  --dayout-opacity: 0.4;
+}
+button {
+  background-color: transparent;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  user-select: none;
+}
+button:focus {
+  box-shadow: 2px 2px 10px var(--text-color), -2px -2px 10px var(--text-color);
+}
+@media (pointer: coarse) {
+  button:focus {
+    box-shadow: none;
+  }
+}
+* {
+  transition: color 0.1s, background-color 0.3s;
+}
+::-webkit-scrollbar {
+  width: 2px;
+}
+::-webkit-scrollbar-track {
+  background: var(--overlay);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--text-color);
+}

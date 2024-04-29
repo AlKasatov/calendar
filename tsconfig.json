@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "es2016",
+      "dom"
+    ],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "module": "esnext",
+    "target": "es5",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "baseUrl": "",
+    "paths": {
+      "@modules/*": ["src/modules/*"],
+      "@common/*": ["src/common/*"],
+      "@src/*": ["src/*"]
+    }
+  }
+}

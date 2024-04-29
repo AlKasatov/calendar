@@ -1,0 +1,84 @@
+.overlay {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(7px);
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 80px 16px 16px 16px;
+  overflow-y: auto;
+  height: 100vh;
+}
+.item {
+  box-sizing: border-box;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.month {
+  width: 25%;
+}
+.month.m {
+  width: calc(100% / 3);
+}
+.month.s {
+  width: 50%;
+}
+.year {
+  width: 10%;
+}
+.year.m,
+.year.s {
+  width: 20%;
+  font-size: 14px;
+}
+.button {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--text-color);
+  border-radius: 8px;
+  padding: 16px 8px;
+  transition: border 0.3s;
+}
+.button:hover {
+  color: var(--daysOff-color);
+  border: 1px solid var(--daysOff-color);
+}
+.current {
+  outline: 2px solid var(--text-color);
+}
+.close {
+  width: 51px;
+  height: 51px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+.close:after,
+.close:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: 25px;
+  top: 0;
+  background-color: var(--text-color);
+  transform-origin: center;
+  transition: background-color 0.3s;
+}
+.close:after {
+  transform: rotate(45deg);
+}
+.close:before {
+  transform: rotate(-45deg);
+}
+.close:hover:after,
+.close:hover:before {
+  background-color: var(--daysOff-color);
+}

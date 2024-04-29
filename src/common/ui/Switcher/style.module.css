@@ -1,0 +1,77 @@
+.wrapper {
+  padding: 8px 16px;
+}
+.button {
+  display: inline-block;
+  color: var(--text-color);
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  padding: 8px;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: var(--hover);
+}
+.button:not(:last-child) {
+  border-right: 1px solid var(--text-color);
+}
+.button.active {
+  color: var(--daysOff-color);
+  font-weight: 700;
+}
+.mobileButton {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  overflow: hidden;
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+.mobileButtonItem {
+  display: block;
+  border-bottom: 1px solid var(--text-color);
+}
+.mobileButtonItem.active {
+  color: var(--daysOff-color);
+}
+.animationWrapper {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.animation {
+  animation-delay: 0;
+  animation-direction: normal;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-name: up;
+  animation-play-state: running;
+  animation-timing-function: ease-in;
+}
+@keyframes up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}

@@ -1,0 +1,30 @@
+.dayLabels {
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  user-select: none;
+}
+.dayLabels.m,
+.dayLabels.s {
+  font-size: 14px;
+}
+.dayLabel {
+  box-sizing: border-box;
+  width: calc(100% / 7);
+  text-align: center;
+}
+.landscape {
+  flex-direction: row;
+  border-bottom: 1px solid var(--text-color);
+  padding-bottom: 20px;
+}
+.portrait {
+  flex-direction: column;
+  border-right: 1px solid var(--text-color);
+  padding-right: 32px;
+  justify-content: space-around;
+}
+.portrait.s {
+  padding-right: 16px;
+}
