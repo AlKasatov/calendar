@@ -136,14 +136,16 @@ export const getWidgetBreakpoint = (width: number) => {
   return WIDGET_BREAKPOINTS_VALUES[2];
 };
 
+
 export const getClosestValidDayInOtherMonth = (year: number, month: number, day: number) => {
   let d = day;
-  const isValid = new Date(`${year}-${month + 1}-${day}`).getMonth() === month;
+  const m = month + 1
+  const isValid = new Date(`${year}-${m.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`).getMonth() === month;
   if (isValid) {
     return day;
   }
 
-  while (new Date(`${year}-${month + 1}-${d}`).getMonth() !== month) {
+  while (new Date(`${year}-${m.toString().padStart(2, '0')}-${d.toString().padStart(2, '0')}`).getMonth() !== month) {
     d--;
   }
   return d;
